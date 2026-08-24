@@ -1,6 +1,7 @@
 #ifndef PROXY_H_INCLUDED
 #define PROXY_H_INCLUDED
 
+#include <map>
 #include <string>
 #include <vector>
 
@@ -8,6 +9,7 @@
 
 using String = std::string;
 using StringArray = std::vector<String>;
+using StringMap = std::map<String, String>;
 
 enum class ProxyType
 {
@@ -132,6 +134,7 @@ struct Proxy {
     String GRPCMode;
     String ShortId;
     String Flow;
+    String Encryption;
     bool FlowShow = false;
     tribool DisableSni;
     uint32_t UpSpeed;
@@ -146,6 +149,7 @@ struct Proxy {
     String PacketEncoding;
     String Multiplexing;
     tribool V2rayHttpUpgrade;
+    StringMap XHTTPOptions;
 };
 
 #define SS_DEFAULT_GROUP "SSProvider"

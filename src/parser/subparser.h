@@ -31,7 +31,7 @@ void hysteria2Construct(Proxy &node, const std::string &group, const std::string
                         const std::string &port, const std::string &password, const std::string &host,
                         const std::string &up, const std::string &down, const std::string &alpn,
                         const std::string &obfsParam, const std::string &obfsPassword, const std::string &sni,
-                        const std::string &publicKey, const std::string &ports,
+                        const std::string &publicKey, const std::string &fingerprint, const std::string &ports,
                         tribool udp, tribool tfo,
                         tribool scv,const std::string& underlying_proxy="");
 
@@ -40,7 +40,7 @@ void vlessConstruct(Proxy &node, const std::string &group, const std::string &re
                     const std::string &net, const std::string &cipher, const std::string &flow, const std::string &mode,
                     const std::string &path, const std::string &host, const std::string &edge, const std::string &tls,
                     const std::string &pkd, const std::string &sid, const std::string &fp, const std::string &sni,
-                    const std::vector<std::string> &alpnList,const std::string &packet_encoding,
+                    const std::vector<std::string> &alpnList,const std::string &packet_encoding, const std::string &encryption,
                     tribool udp = tribool(), tribool tfo = tribool(), tribool scv = tribool(),
                     tribool tls13 = tribool(),const std::string& underlying_proxy="",tribool v2ray_http_upgrade=tribool());
 
